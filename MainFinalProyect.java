@@ -1,31 +1,42 @@
 package finalProyectJava;
 
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
 public class MainFinalProyect{
 
     public static void main(String[] args) {
         //matrix and vector definition
-        int [][]matris = new int[4][4]; int vectorV1[] = new int[4];
+        int [][]mainMatrix = new int[4][4]; int vectorV1[] = new int[4];
         //Llamando al subprograma welcomeMessage
-        SubPrograms MessageDialog = new SubPrograms();
+        PopUpMessages MessageDialog = new PopUpMessages();
         MessageDialog.welcomeMessage();
 
+        //call for the class Matrices Menu and create an object
+        MatricesMenu matrixOne = new MatricesMenu();
         //option menu controled by do while and switch case
-        int menuStatus = 1;
+        int menuStatus = 1; Scanner read = new Scanner (System.in);
+
         do{
-            switch(){
-                case 1:
-                break;
+            //question to the use ¿what option you wants to run?
 
+            switch(MessageDialog.showOptionMenu()){
+                case 1: //fill the matris
+                matrixOne.fillMatrix(mainMatrix,read);
+                break;
                 case 2:
-                break;
+                matrixOne.printMatrix(mainMatrix);
 
+                break;
                 case 3:
-                break;
 
+                break;
                 case 4:
-                break;
 
+                break;
                 case 5:
+
                 break;
                 case 6:
                 menuStatus = 0;

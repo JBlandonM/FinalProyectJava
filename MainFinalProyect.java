@@ -27,9 +27,9 @@ public class MainFinalProyect{
                 break;
                 case 2:
                 matrixOne.printMatrix(mainMatrix);
-
                 break;
                 case 3:
+                matrixOne.mainDiagonal(mainMatrix, vectorV1);
 
                 break;
                 case 4:

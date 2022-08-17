@@ -29,7 +29,8 @@ public class MainFinalProyect{
                 matrixOne.printMatrix(mainMatrix);
                 break;
                 case 3:
-                matrixOne.mainDiagonal(mainMatrix, vectorV1);
+                matrixOne.mainDiagonalTrace(mainMatrix, vectorV1);
+                System.out.println("- Traza de la Matris dada - \n"+matrixOne.mainDiagonalTrace(mainMatrix, vectorV1));
 
                 break;
                 case 4:

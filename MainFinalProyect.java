@@ -31,7 +31,7 @@ public class MainFinalProyect{
                 case 3:
                 matrixOne.mainDiagonalTrace(mainMatrix, vectorV1);
                 System.out.println("- Traza de la Matris dada - \n"+matrixOne.mainDiagonalTrace(mainMatrix, vectorV1));
-
+                //was called the method to print the matrix trace and the main diagonal.
                 break;
                 case 4:
 

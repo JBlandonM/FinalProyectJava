@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 public class MatricesMenu { 
     //the method fill matrix receive the paramer of a empty matrix, and fill that, with the numbers givens of the user.
     public int[][] fillMatrix(int matrix[][], Scanner read){
-        System.out.println("\nRellenado de Matris, Indique 16 Números Enteros, Por Favor.");
+        System.out.println("\n-Rellenado de Matris, Indique 16 Números Enteros, Por Favor-");
         for (int row=0; row<4; row++){
             for (int column=0; column<4; column++){
                 matrix[row][column]= read.nextInt();
@@ -17,7 +17,7 @@ public class MatricesMenu {
     }
     //Method to print the elements of a matrix ordered per row and column.
     public void printMatrix(int matrix[][]){
-        System.out.println("\n - Impresion De La Matris -");
+        System.out.println("\n---Impresion De La Matris---");
         for (int row=0; row<4; row++){
             for (int column=0; column<4; column++){
                 System.out.print(matrix[row][column]+ " ");
@@ -28,7 +28,7 @@ public class MatricesMenu {
     //Method to show the main diagonal of the matrix. and calculate the value of the matrix trace.
         public int mainDiagonalTrace(int matrix[][], int vector[]){
         int Diagonaltrace = 0;
-        System.out.println("\n- Diagonal Principal de la Matris -");
+        System.out.println("\n---Diagonal Principal de la Matris---");
         for (int row=0; row<4; row++){
             for (int column=0; column<4; column++){//in those lines is printed the main diagonal and calculated the trace of the matrix.
                 if (row==column){

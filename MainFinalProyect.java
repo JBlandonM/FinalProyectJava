@@ -29,7 +29,7 @@ public class MainFinalProyect{
                 break;
                 case 3:
                 int matrixTrace = matrixOne.mainDiagonalTrace(mainMatrix, vectorV1);
-                System.out.println("\n- Traza de la Matris -"+matrixTrace);
+                System.out.println("\n---Traza de la Matris---\n"+matrixTrace);
                 //was called the method to print the matrix trace and the main diagonal.
                 break;
                 case 4:

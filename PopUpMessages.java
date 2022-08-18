@@ -1,4 +1,7 @@
 package finalProyectJava;
+import java.util.Arrays;
+import java.util.Vector;
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 public class PopUpMessages {
@@ -28,6 +31,29 @@ public class PopUpMessages {
             "6: Salir \n" +
             "¿Cual opcion desea realizar?"));
         return optionSelected;
+    }
+    public String rowOrColumnSelection(){
+        int status= 1;
+        //do {
+            //here is the question to the user, ¿what do wants to sort, Row or Colum?
+            String letterSelection = JOptionPane.showInputDialog("Digite Que Desea Modificar, 'F'= Fila | 'C'= Columna.");
+            //if the user select Ff change that string to "Fila", and Cc to "Columna"
+            if(letterSelection.equals("F") || letterSelection.equals("f")){
+                letterSelection = "Fila";
+                status=0;
+            }else if(letterSelection.equals("C") || letterSelection.equals("c")){
+                letterSelection = "Columna";
+                status=0;
+            }else{
+                System.out.println("Digite un Valor Valido.");
+            }        
+            return letterSelection;
+        //}while(status==1);
+    }
+    public int rowOrColumnNumber(String letterSelection){
+        //in this section is the Question of the ¿number? of Row or Column the user wants to sort
+        int finalSelection= Integer.parseInt(JOptionPane.showInputDialog("Digite Una "+letterSelection+" Que Desea Modificar "+" [1-4]"));
+        return finalSelection;
     }
 
 

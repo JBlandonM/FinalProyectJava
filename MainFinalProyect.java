@@ -2,13 +2,16 @@ package finalProyectJava;
 
 import java.util.Scanner;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.xml.transform.Source;
 
 public class MainFinalProyect{
 
     public static void main(String[] args) {
         //matrix and vector definition
         int [][]mainMatrix = new int[4][4]; int vectorV1[] = new int[4];
+        JFrame window = new JFrame();
         //Llamando al subprograma welcomeMessage
         PopUpMessages MessageDialog = new PopUpMessages();
         MessageDialog.welcomeMessage();
@@ -29,18 +32,26 @@ public class MainFinalProyect{
                 matrixOne.printMatrix(mainMatrix);
                 break;
                 case 3:
-                matrixOne.mainDiagonalTrace(mainMatrix, vectorV1);
-                System.out.println("- Traza de la Matris dada - \n"+matrixOne.mainDiagonalTrace(mainMatrix, vectorV1));
+                int matrixTrace = matrixOne.mainDiagonalTrace(mainMatrix, vectorV1);
+                System.out.println("\n- Traza de la Matris -"+matrixTrace);
                 //was called the method to print the matrix trace and the main diagonal.
                 break;
                 case 4:
-
+                //bubble sort
+                String letterSelected = MessageDialog.rowOrColumnSelection();
+                int numberSelected = MessageDialog.rowOrColumnNumber(letterSelected);
+                matrixOne.bubbleSort(numberSelected, letterSelected, mainMatrix, vectorV1);
+                matrixOne.printMatrix(mainMatrix);
                 break;
                 case 5:
-
+                letterSelected = MessageDialog.rowOrColumnSelection();
+                numberSelected = MessageDialog.rowOrColumnNumber(letterSelected);
+                matrixOne.ScalarMultiplication(letterSelected, numberSelected, mainMatrix);
+                matrixOne.printMatrix(mainMatrix);
                 break;
                 case 6:
                 menuStatus = 0;
+                JOptionPane.showMessageDialog(window,"Muchas Gracias Por Usar Nuestro Sistema.");
                 break;
 
             }

@@ -1,10 +1,7 @@
 package finalProyectJava;
-
 import java.util.Scanner;
-
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.xml.transform.Source;
 
 public class MainFinalProyect{
 
@@ -23,7 +20,6 @@ public class MainFinalProyect{
 
         do{
             //question to the use ¿what option you wants to run?
-
             switch(MessageDialog.showOptionMenu()){
                 case 1: //fill the matris
                 matrixOne.fillMatrix(mainMatrix,read);
@@ -38,25 +34,22 @@ public class MainFinalProyect{
                 break;
                 case 4:
                 //bubble sort
-                String letterSelected = MessageDialog.rowOrColumnSelection();
-                int numberSelected = MessageDialog.rowOrColumnNumber(letterSelected);
-                matrixOne.bubbleSort(numberSelected, letterSelected, mainMatrix, vectorV1);
-                matrixOne.printMatrix(mainMatrix);
+                String letterSelected = MessageDialog.rowOrColumnSelection(); //call of the Row or Column selection Window, and store the return value in a variable.
+                int numberSelected = MessageDialog.rowOrColumnNumber(letterSelected); //call of the selection of Number of row or column window and store in a variable.
+                matrixOne.bubbleSort(numberSelected, letterSelected, mainMatrix, vectorV1); //using the value of the 2 previous variables, like parameters in the bubble sort method.
+                matrixOne.printMatrix(mainMatrix);//print the new martrix modified.
                 break;
                 case 5:
-                letterSelected = MessageDialog.rowOrColumnSelection();
-                numberSelected = MessageDialog.rowOrColumnNumber(letterSelected);
-                matrixOne.ScalarMultiplication(letterSelected, numberSelected, mainMatrix);
+                letterSelected = MessageDialog.rowOrColumnSelection(); //using the method to select Row or Column, and is stored the return value.
+                numberSelected = MessageDialog.rowOrColumnNumber(letterSelected); //using the method to select Number of R/C, and is stored the return value.
+                matrixOne.ScalarMultiplication(letterSelected, numberSelected, mainMatrix);//Call of the method to Multiplicate a vector with a number.
                 matrixOne.printMatrix(mainMatrix);
                 break;
                 case 6:
                 menuStatus = 0;
                 JOptionPane.showMessageDialog(window,"Muchas Gracias Por Usar Nuestro Sistema.");
                 break;
-
             }
-
-
         }while(menuStatus==1);
     
         System.out.println("Fin del Algortimo");

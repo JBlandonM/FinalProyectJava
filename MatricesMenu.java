@@ -10,8 +10,10 @@ public class MatricesMenu {
         System.out.println("\n-Rellenado de Matris, Indique 16 Números Enteros, Por Favor-");
         for (int row=0; row<4; row++){
             for (int column=0; column<4; column++){
+                System.out.print("Fila["+(row+1)+"] Columna["+(column+1)+"]: ");
                 matrix[row][column]= read.nextInt();
             }
+            System.out.println("");
         }
         return matrix;
     }
